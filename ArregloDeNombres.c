@@ -10,7 +10,7 @@ void mostrarNombres(char *listasNombres[], int cantidad) {
         printf("%s", listasNombres[i]);
     }
 }
-void BuscarNombre(int id, char *listasNombres[], int cantidad) {
+void BuscarNombrePorId(int id, char *listasNombres[], int cantidad) {
     for (int i = 0; i < cantidad; i++) {
         if (i == id) {
             printf("Nombre encontrado: %s", listasNombres[i]);
