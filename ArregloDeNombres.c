@@ -22,6 +22,16 @@ void BuscarNombrePorPalabra(char palabraClave[], char *listasNombres[], int cant
         printf("-1");
     }
 }
+void BuscarNombrePorId(int id, char *listasNombres[], int cantidad) {
+    for (int i = 0; i < cantidad; i++) {
+        if (i == id) {
+            printf("Nombre encontrado: %s", listasNombres[i]);
+        }else {
+            printf("No se encontro el valor buscado.\n");
+        }
+    }
+}
+
 int main() {
     char *listasNombres[5];
     char auxiliar[NOMBRES];
