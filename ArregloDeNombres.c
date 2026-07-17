@@ -10,6 +10,18 @@ void mostrarNombres(char *listasNombres[], int cantidad) {
         printf("%s", listasNombres[i]);
     }
 }
+void BuscarNombre(char palabraClave[], char *listasNombres[], int cantidad) {
+    int encontrado = 0;
+    for (int i = 0; i < cantidad; i++) {
+        if (strstr(listasNombres[i], palabraClave) != NULL) {
+            encontrado = 1;
+            printf("El nombre '%s' contiene la palabra clave '%s'.\n", listasNombres[i], palabraClave);
+        }
+    }
+    if (!encontrado) {
+        printf("-1");
+    }
+}
 
 int main() {
     char *listasNombres[5];
